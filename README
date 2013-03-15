@@ -1,0 +1,8 @@
+This project is an unofficial native Android app for Console.fm. 
+
+All source is licensed under GPL
+
+Current list of TODO:
+-Get access to Console API
+-Get UI demonstration working (BigInteger crash?)
+    -Fix ListView adapter to use actual data
