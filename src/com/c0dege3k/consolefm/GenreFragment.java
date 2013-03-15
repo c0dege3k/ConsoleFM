@@ -1,6 +1,7 @@
 package com.c0dege3k.consolefm;
 
 import android.app.Activity;
+import android.app.Fragment;
 
 /**
  * User: c0dege3k
@@ -8,5 +9,7 @@ import android.app.Activity;
  * Time: 1:28 AM
  * Package: com.c0dege3k.consolefm
  */
-public class GenreFragment extends Activity{
+public class GenreFragment extends Fragment{
+
+
 }

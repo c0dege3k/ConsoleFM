@@ -4,9 +4,5 @@
              android:orientation="vertical"
              android:layout_width="fill_parent"
              android:layout_height="fill_parent">
-    <fragment android:name="com.c0dege3k.consolefm.SongListFragment"
-              android:layout_height="match_parent"
-              android:layout_width="0dp"
-              android:layout_weight="5" />
 </FrameLayout>
 

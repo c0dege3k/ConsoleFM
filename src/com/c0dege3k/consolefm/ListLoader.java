@@ -7,7 +7,9 @@ import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -22,6 +24,8 @@ import android.widget.SimpleCursorAdapter;
  */
 public class ListLoader extends ListActivity
         implements LoaderManager.LoaderCallbacks<Cursor> {
+
+    final static String TAG = "ListLoader";
 
     //Adapter used to display data
     SimpleCursorAdapter mAdapter;
@@ -68,7 +72,10 @@ public class ListLoader extends ListActivity
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         //Creating CursorLoader that creates the Cursor for the data to be displayed
         //TODO Make this CL a fully defined one (other constructor) & differentiate between GENRE and SONG
-        return new CursorLoader(this);
+        CursorLoader cursorLoader = new CursorLoader(this);
+        cursorLoader.setProjection(loadSongs ? songData:genreData);
+        Log.d(TAG, "Loading new cursor with " + (loadSongs ? songData : genreData));
+        return cursorLoader;
     }
     //Called when previous loader finishes
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor data) {
