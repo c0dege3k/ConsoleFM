@@ -27,11 +27,11 @@ public class RootActivity extends Activity {
 
             //Create instance of SongListFrag
             SongListFragment songFrag = new SongListFragment();
-            Log.d(TAG, "songFrag = "+songFrag.toString());
+            songFrag.setArguments(getIntent().getExtras());
 
             //Get genre stream list to pull from to load SongFrag
 
-            getFragmentManager().beginTransaction().add(R.id.fragment_container, songFrag);
+            getFragmentManager().beginTransaction().add(R.id.fragment_container, songFrag).commit();
         }
     }
 }

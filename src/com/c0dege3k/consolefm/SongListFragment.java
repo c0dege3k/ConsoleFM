@@ -34,6 +34,7 @@ public class SongListFragment extends ListFragment{
         Log.d(TAG, "Setting ListAdapter with songData");
         //Creating adapter for the list. This is 10x easier than what I was trying to do with the ListLoader. derp.
         setListAdapter(new ArrayAdapter<String>(getActivity(), R.layout.simple_list_item_activated_1, songData));
+        Log.d(TAG, "ListAdapter is " + getListAdapter().getCount() + "long");
     }
 
     public void onStart() {

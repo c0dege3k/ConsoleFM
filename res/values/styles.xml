@@ -1,0 +1,5 @@
+<resources>
+    <color name="bg_color">#3b3c40</color>
+    <style name="ConsoleHolo" parent="android:Theme.Holo.Light">
+    </style>
+</resources>
